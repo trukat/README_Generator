@@ -1,4 +1,6 @@
-const inquirer= require('inquirer')
+const inquirer= require('inquirer');
+const fs= require('fs');
+const path= require('path')
 
 const questions= [
     {
@@ -13,30 +15,35 @@ const questions= [
     },
     {
         type: "input",
-        name: "Project Name",
+        name: "projectName",
         message: "What is your project name?"
     },
     {
         type: "input",
-        name: "Project Description",
+        name: "projectDescription",
         message: "Please write a short description of your project."
     },
     {
         type: "input",
-        name: "Commands",
+        name: "installation",
         message: "What commands should be run to install dependencies?",
         default: "npm i"
     },
     {
         type: "input",
-        name: "Usage",
-        message: "What does the user need to know about using the repo?"
+        name: "usage",
+        message: "How is this application used?"
     },
     {
         type: "input",
-        name: "Contributing",
-        message: "What does the user need to know about contributing to the repo?"
+        name: "contributors",
+        message: "List all contributors to this project."
     },
+    {
+      type: "input",
+      name: "testing",
+      message: "Is there a specific way to test this app?"
+  },
     {
         type: "list",
         name: "license",
@@ -48,13 +55,59 @@ const questions= [
 inquirer
   .prompt(questions)
   .then(answers => {
-    console.log(JSON.stringify(answers, null, '  '));
-    // Use user feedback for... whatever!!
+
+    writeToFile("generateREADME.md", generateMarkdown({...answers}))
   })
+
   .catch(error => {
     if(error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
     } else {
-      // Something else when wrong
+ 
     }
   });
+
+  function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+  }
+
+  function generateMarkdown(data){
+    return `# ${data.projectName}
+  ![GitHub license](https://img.shields.io/badge/license-${data.license}-blue.svg)
+ 
+  ## Table of Contents
+  1. [Description](#projectDescription)
+  2. [Installation](#installation)
+  3. [Usage](#usage)
+  4. [Contributors](#contributors)
+  5. [Testing](#testing)
+  6. [License](#license)
+  7. [Questions](#questions)
+
+  ## Description 
+  ${data.projectDescription}
+    
+  ## Installation
+    
+  In order to install the necessary dependencies run the following command:
+  \`\`\`
+  ${data.installation}
+  \`\`\`
+
+  ## Usage
+  ${data.usage}
+
+  ## Contributors
+  ${data.contributors}
+
+  ## Testing
+  ${data.testing}
+
+  ## License
+  ${data.license}
+
+  ## Questions
+  For questions about this application, please contact me at: ${data.Email}
+
+  GitHub Profile: [${data.Github}](https://github.com/${data.Github}/)
+    `;
+  }

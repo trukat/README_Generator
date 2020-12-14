@@ -11,7 +11,7 @@
   7. [Questions](#questions)
 
   ## Description 
-  This application generates a README markdown file for the user's respective project.
+  This application generates a README markdown file for the user's respective project
     
   ## Installation
     
@@ -36,7 +36,4 @@
   For questions about this application, please contact me at: kati.k220@gmail.com
 
   GitHub Profile: [trukat](https://github.com/trukat/)
-
-  ## Live Demo
-  [App Video](https://drive.google.com/file/d/1yRsqrEl395IZtdEzXE4g3fUKnq1bMOW2/view)
     
