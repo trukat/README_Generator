@@ -71,8 +71,8 @@ inquirer
   }
 
   function generateMarkdown(data){
-    return `# ${data.projectName}
-  ![GitHub license](https://img.shields.io/badge/license-${data.license}-blue.svg)
+  return `# ${data.projectName}
+  ![License](https://img.shields.io/badge/license-${data.license}-blue.svg)
  
   ## Table of Contents
   1. [Description](#projectDescription)

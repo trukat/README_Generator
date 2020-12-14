@@ -1,5 +1,5 @@
 # README Generator
-  ![GitHub license](https://img.shields.io/badge/license-Apache 2.0-blue.svg)
+  ![License](https://img.shields.io/badge/license-GPL-blue.svg)
  
   ## Table of Contents
   1. [Description](#projectDescription)
@@ -11,7 +11,7 @@
   7. [Questions](#questions)
 
   ## Description 
-  This application generates a README markdown file for the user's respective project
+  This application generates a README markdown file for the user's respective project.
     
   ## Installation
     
@@ -21,7 +21,7 @@
   ```
 
   ## Usage
-  The user must first answer a few questions about their project. The application then creates a markdown file with the user's answers.
+  The user must first answer a few questions about their project, the application then creates a markdown file with the user's answers.
 
   ## Contributors
   Kathy Trujillo
@@ -30,7 +30,7 @@
   node index.js
 
   ## License
-  Apache 2.0
+  GPL
 
   ## Questions
   For questions about this application, please contact me at: kati.k220@gmail.com

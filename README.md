@@ -1,5 +1,5 @@
 # README Generator
-  ![GitHub license](https://img.shields.io/badge/license-Apache 2.0-blue.svg)
+  ![License](https://img.shields.io/badge/license-GPL-blue.svg)
  
   ## Table of Contents
   1. [Description](#projectDescription)
@@ -21,7 +21,7 @@
   ```
 
   ## Usage
-  The user must first answer a few questions about their project. The application then creates a markdown file with the user's answers.
+  The user must first answer a few questions about their project, the application then creates a markdown file with the user's answers.
 
   ## Contributors
   Kathy Trujillo
@@ -30,7 +30,7 @@
   node index.js
 
   ## License
-  Apache 2.0
+  GPL
 
   ## Questions
   For questions about this application, please contact me at: kati.k220@gmail.com
@@ -38,5 +38,5 @@
   GitHub Profile: [trukat](https://github.com/trukat/)
 
   ## Live Demo
-  [App Video](https://drive.google.com/file/d/1yRsqrEl395IZtdEzXE4g3fUKnq1bMOW2/view)
+  [Instructional Video](https://drive.google.com/file/d/1WgKlj28yYxp3i1URMA7XeHBLxE4JFvmd/view)
     
